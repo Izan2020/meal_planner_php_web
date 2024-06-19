@@ -28,12 +28,12 @@ class LocalDataSource {
         // start XAMPP's MySQL server and adjust host, dbname, username, 
         // and password settings to enable seamless operation of the application.
 
-        // Host
-        $host = "127.0.0.1";
+        // Host (default: localhost)
+        $host = "";
         // Database Name
-        $dbname = "test";
+        $dbname = "";
         // Username
-        $username = "pma";
+        $username = "";
         // Password
         $password = "";
         

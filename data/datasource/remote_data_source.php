@@ -25,7 +25,7 @@ class RemoteDataSource {
     // Here is the link to register for a Spoonacular account: 'https://spoonacular.com/food-api/console#Dashboard' 
 
     // Api Key
-    const API_KEY = "157f3995ddbf4f4286ad6623a8408549";
+    const API_KEY = "";
     const BASE_URL = "https://api.spoonacular.com/recipes/";
 
     private $client;
