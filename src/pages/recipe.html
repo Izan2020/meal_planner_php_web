@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MealPlanner - Generate</title>
+    <link rel="stylesheet" href="../style/recipe.css">
+    <script src="https://kit.fontawesome.com/30a901b600.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo" >MealPlanner.</a>
+        <nav class="navbar">
+            <a href="/">Home</a>
+            <a href="/recipe">Recipes</a>
+            <a href="#">Plans</a>
+            <a href="#">Workout</a>
+            <a href="login.html">Account</a>
+        </nav>
+    </header>
+    <section class="home">
+        <div class="home-content">
+
+            <div id="food-generator-container">
+                <div class="header-fgc">
+                    <h1>Plan your Dietary</h1>
+                    <a href="/recipe-history">
+                        <i class="fa-solid fa-clock-rotate-left btn-history"></i>
+                    </a>
+                </div>
+                <div id="alert"></div>
+                <form id="meal-planner-form">
+
+                    <label id="label-input" for="dietary-preferences">Dietary Preferences<br></label>
+                    <select name="dietary-preferences" id="input-food"></select>
+
+                    <label id="label-input" for="allergies">Allergies<br></label>
+                    <select name="allergies" id="input-food"></select>
+
+                    <label id="label-input" for="calorie-target">Calories Target<br></label>
+                    <input id="input-food" type="number" name="calorie-target" max="2200"><br>
+                    <input id="button-generate" type="button" value="Generate Meal Plan">
+                    <div id="loading"></div>
+                </form>
+                <div id="result-list">
+                </div>
+            </div>
+        </div>
+    </section>
+    <script type="module" src="../scripts/recipe.js"></script>
+    
+ </body>
+</html>

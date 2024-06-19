@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MealPlanner - Generate History</title>
+    <script src="https://kit.fontawesome.com/30a901b600.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../style/recipe_history.css">    
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo">MealPlanner.</a>
+        <nav class="navbar">
+            <a href="/">Home</a>
+            <a href="/recipe">Recipes</a>
+            <a href="/">Plans</a>
+            <a href="/">Workout</a>
+            <a href="#">Account</a>
+        </nav>
+    </header>
+    <section class="home">
+        <div id="food-generator-container">
+            <div class="header-fgc">
+                <div class="wrapper-title">
+                    <a href="javascript:history.back()">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </a>
+                    <h1>Meal History.</h1>                
+                </div>
+                <a id="btn-clear-h">
+                    <i class="fa-solid fa-trash-can-arrow-up btn-clear"></i>
+                </a>
+            </div>            
+            <div id="alert"></div>
+            <hr>
+            <div id="listview-history"></div>            
+            </div>
+        </div>
+
+    </section>
+
+
+    <script type="module" src="../scripts/recipe_history.js"></script>
+</body>
+
+</html>

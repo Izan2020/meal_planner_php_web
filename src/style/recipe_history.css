@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: white;
+    color: black;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;    
+    padding: 52px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    transition: .3s;
+}
+
+.logo {
+    font-size: 25px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 100px;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #00abf0;
+}
+
+.header.sticky {
+    background-color: #081b20;
+    padding: 32px;
+}
+
+/* SECTION HOME */
+
+.home {
+    background-color: #081b29;    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    height: 100vh;    
+}
+
+#food-generator-container {
+    padding: 20px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    transition: transform 0.3s, box-shadow 0.3s;
+
+    padding: 5%;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 20px;
+}
+
+.header-fgc {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-clear {
+    font-size: 38px;
+    padding: 12px;
+    color: #f44336;
+    transition: .3s;
+    border-radius: 12px;
+}
+
+.btn-clear:hover {
+    background-color: #f44336;
+    color: white;
+}
+
+
+.wrapper-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header-fgc h1 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #081b29;
+    margin-left: 12px;
+}
+
+.header-fgc a {
+    text-decoration: none;
+}
+
+.header-fgc i {
+    font-size: 32px;
+    color: #081b29;
+}
+
+hr {
+    margin-top: 22px;
+    margin-bottom: 12px;
+    background-color: purple;
+}
+
+/* LISTVIEW HISTORY */
+
+#listview-history {
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+}
+
+.item-history {
+    background-color: #ededed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px;
+    color: black;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 8px;
+    transition: .3s;
+}
+
+.item-history:hover {
+    background-color: darkgray;
+}
+
+.item-history h1 {
+    font-size: 18px;
+}
+
+.item-history h2 {
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.alert {
+    padding: 20px;
+    background-color: #f44336;
+    /* Red */
+    color: white;
+    margin-top: 32px;
+
+    border-radius: 5px;
+}
+
+/* The close button */
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+    color: black;
+}
+
+#loading {
+    margin-top: 12px;
+    color: #000000;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title-doc" >MealPlanner - Ingredients</title>
+    <link rel="stylesheet" href="../style/recipe_detail.css">
+    <script src="https://kit.fontawesome.com/30a901b600.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo">MealPlanner.</a>
+        <nav class="navbar">
+            <a href="/">Home</a>
+            <a href="/recipe">Recipes</a>
+            <a href="#">Plans</a>
+            <a href="#">Workout</a>
+            <a href="login.html">Account</a>
+        </nav>
+    </header>
+    <section class="recipe">
+        <h1 id="message-text" class="text-loading" >Loading...</h1>
+        <div class="container-ingredients" id="cont-igrd">
+            <div class="header-ci">
+                <a id="btn-back" href="javascript:history.back()">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </a>
+                <h1 id="text-title">Pasta with Garlic, Scallions, Cauliflower & Breadcrumbs</h1>
+            </div>
+            <hr>
+            <div class="content-ingredients">
+                <img id="image-ingredients" src="https://img.spoonacular.com/recipes/716429-556x370.jpg" alt="">                
+                <ul class="row-details">
+                    <li>Ready in 
+                        <span id="text-readyInMinutes" >45</span> Minutes
+                    </li>
+                    <li>Price 
+                        $<span id="text-pricePerServing" >45</span>
+                    </li>
+                    <li>Health Score 
+                        <span id="text-healthScore" >100</span>%
+                    </li>
+                    
+                </ul>
+                <h2 class="title-section" >Description</h2>
+                <p id="text-summary" >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae accusamus qui molestias tempore culpa repellendus laboriosam iste eos, nulla veritatis eligendi quibusdam laudantium cum quis.</p>
+                <h2 class="title-section" >Ingredients:</h2>
+                <div class="listview-ingredients" id="lview-igrd">
+               
+                </div>
+            </div>     
+           
+        </div>
+    </section>
+    <script type="module" src="../scripts/recipe_detail.js"></script>
+    
+ </body>
+</html>

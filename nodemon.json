@@ -1,0 +1,5 @@
+{
+    "watch": ["src", "routes", "data"],
+    "ext": "php",
+    "exec": "php -S localhost:8080 -t src"
+  }

@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #081b29;
+    color: #ededed;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;    
+    padding: 52px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    z-index: 100;
+    transition: .3s;
+}
+
+.header.sticky {
+    background-color: #081b20;
+    padding: 32px;
+}
+
+
+.logo {
+    font-size: 25px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 100px;    
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #00abf0;
+}
+
+#label-input {
+    color: #000000;
+    margin-top: 32px;
+    margin-bottom: 6px;
+}
+
+#input-food {
+    flex-grow: 1;
+    margin-top: 4px;
+    height: 52px;
+    border-radius: 8px;
+    border-color: darkgrey;
+    padding: 12px;
+    padding-right: 12px;
+}
+
+#button-generate {
+    height: 62px;
+    margin-top: 22px;
+    background-color: #081b29;
+    color: white;
+    font-weight: 600;
+    font-size: 18px;    
+    transition: .3s;    
+    border-width: 0px;
+    border-radius: 12px;
+    border-color: #081b29;
+}
+
+#button-generate:hover {
+    background-color: white;
+    color: #081b29;
+    border-width: 2px;
+
+}
+
+.home-content {
+    margin-top: 12%;
+}
+
+.home-content h1 {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #00abf0;
+}
+
+.home-content p {
+    font-size: 16px;
+    margin: 20px 0 40px;
+}
+
+.home-content .btn-box {
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+}
+
+.btn-box a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 100%;
+    background: #00abf0;
+    border: 2px solid #00abf0;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #081b20;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.btn-box a:hover {
+    color: #ededed;
+}
+
+.btn-box a:nth-child(2) {
+    background: transparent;
+    color: #ededed;
+}
+
+.btn-box a:nth-child(2):hover {
+    color: #081b29;
+}
+
+.btn-box a:nth-child(2)::before {
+    background: #00abf0;
+
+}
+
+.btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #081b29;
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box a:hover::before {
+    width: 100%;
+}
+
+.home-sci {
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-sci a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #00abf0;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #00abf0;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.home-sci a:hover {
+    color: #081b29;
+}
+
+.home-sci a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #00abf0;
+    z-index: -1;
+    transition: .5s;
+}
+
+.home-sci a:hover::before {
+    width: 100%;
+}
+
+#food-generator-container {
+    padding: 20px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    transition: transform 0.3s, box-shadow 0.3s;
+
+    padding: 5%;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 20px;
+}
+
+.header-fgc {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;    
+    align-items: center;
+}
+
+.btn-history {
+    font-size: 38px;
+    padding: 12px;
+    color: #081b29;
+    transition: .3s;
+    border-radius: 12px;
+}
+
+.btn-history:hover {
+    background-color: #081b20;
+    
+    color: white;
+}
+
+#food-generator-container h1 {
+    color: black;
+}
+
+
+#meal-planner-form {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+#result-list {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+}
+
+#recipe-card {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin-top: 12px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+#recipe-card:hover img {
+    transform: scale(1.2);
+
+}
+
+
+#recipe-card h1 {
+    position: absolute;
+    color: white;
+    width: 850px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: justify;
+    line-height: 89%;
+    align-self: center;
+
+}
+
+#recipe-card h1 ul {
+    margin-top: 5px;
+    font-size: 28px;
+    font-weight: 300;
+}
+
+#recipe-card img {
+    display: flex;    
+    height: 240px;
+    width: 100%;
+    object-fit: cover;
+    background-position: center;
+    filter: brightness(50%);
+    transition: 0.3s
+}
+
+.btn-meal-planner-form {
+    color: #081b29;
+}
+
+.alert {
+    padding: 20px;
+    background-color: #f44336;
+    /* Red */
+    color: white;
+    margin-top: 32px;
+
+    border-radius: 5px;
+}
+
+/* The close button */
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+    color: black;
+}
+
+#loading {
+    margin-top: 12px;
+    color: #000000;
+}
