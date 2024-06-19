@@ -29,9 +29,10 @@
 // and then 'datasource' folder, inside remote_data_source.php
 // data > datasource > remote_data_source.php
 
-// To run project, execute this in Terminal 'nodemon'
-// It will provide a link to run the project in localhost
-
+// 0 ========================================================= 0
+// |  To run project, execute this in Terminal 'nodemon'       |
+// |  It will provide a link to run the project in localhost   |
+// 0 ========================================================= 0
 
 require '../vendor/autoload.php';
 require '../router/routes.php';
