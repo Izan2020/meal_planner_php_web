@@ -15,6 +15,49 @@ use PDOException;
 class LocalDataSource {
     private $pdo;
 
+    public function __construct() {
+        
+        // ███╗░░░███╗██╗░░░██╗░██████╗░██████╗░██╗░░░░░
+        // ████╗░████║╚██╗░██╔╝██╔════╝██╔═══██╗██║░░░░░
+        // ██╔████╔██║░╚████╔╝░╚█████╗░██║██╗██║██║░░░░░
+        // ██║╚██╔╝██║░░╚██╔╝░░░╚═══██╗╚██████╔╝██║░░░░░
+        // ██║░╚═╝░██║░░░██║░░░██████╔╝░╚═██╔═╝░███████╗
+        // ╚═╝░░░░░╚═╝░░░╚═╝░░░╚═════╝░░░░╚═╝░░░╚══════╝
+
+        // Before using the app, ensure MySQL is configured: 
+        // start XAMPP's MySQL server and adjust host, dbname, username, 
+        // and password settings to enable seamless operation of the application.
+
+        // Host
+        $host = "127.0.0.1";
+        // Database Name
+        $dbname = "test";
+        // Username
+        $username = "pma";
+        // Password
+        $password = "";
+        
+        try {
+            $dsn = "mysql:host=$host;dbname=$dbname";
+            $this->pdo = new PDO($dsn, $username, $password);
+            $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+             // Creates Table if it Doesnt exist in Database
+            $stmt = $this->pdo->prepare("
+            CREATE TABLE IF NOT EXISTS history (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            title VARCHAR(50) NOT NULL,
+            recipeId INT NOT NULL,    
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            )");
+
+            // Execute Create table Query
+            $stmt->execute();
+            error_log("Table 'history' Successfully Created");
+        } catch (PDOException $e) {
+            die("Database connection failed: " . $e->getMessage());
+        }
+    }
+
    // Get Recent Meals History
    public function getMealsHistory(): AppResponse  {
     
@@ -57,36 +100,6 @@ class LocalDataSource {
     }
 
     
-    public function __construct() {
-        // Dont forget to start MySQL server in XAMPP :3
-        // Host
-        $host = "127.0.0.1";
-        // Database Name
-        $dbname = "test";
-        // Username
-        $username = "pma";
-        // Password
-        $password = "";
-        
-        try {
-            $dsn = "mysql:host=$host;dbname=$dbname";
-            $this->pdo = new PDO($dsn, $username, $password);
-            $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-             // Creates Table if it Doesnt exist in Database
-            $stmt = $this->pdo->prepare("
-            CREATE TABLE IF NOT EXISTS history (
-            id INT AUTO_INCREMENT PRIMARY KEY,
-            title VARCHAR(50) NOT NULL,
-            recipeId INT NOT NULL,    
-            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-            )");
-
-            // Execute Create table Query
-            $stmt->execute();
-            error_log("Table 'history' Successfully Created");
-        } catch (PDOException $e) {
-            die("Database connection failed: " . $e->getMessage());
-        }
-    }
+   
 }
 ?>
