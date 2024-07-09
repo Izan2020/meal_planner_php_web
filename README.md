@@ -14,7 +14,7 @@ Whether users are looking to lose weight, maintain a healthy lifestyle, or adher
 Used PHP with Slim package, and JS as Client-side
 
 ### 📷 Snapshots
-![foto](https://cdn.discordapp.com/attachments/1110006269571514438/1253092043249418281/image.png?ex=66749868&is=667346e8&hm=b6258337c2e8029fb0706308d318a945018c1f96ff575c97ef2ef4e91b654f02&)
+![foto](https://media.discordapp.net/attachments/1110006269571514438/1253092043249418281/image.png?ex=668da4e8&is=668c5368&hm=3ac93100e87375cad913493e02c03b1fafa1fbb0c2e691f491b513a2d3190bf2&=&format=webp&quality=lossless&width=2006&height=1254)
 
 
 ### 😎 Application Features
